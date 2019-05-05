@@ -1,2 +1,2 @@
 # itea
-On this page you can find my home works.
+On this page you can find my homeworks.
