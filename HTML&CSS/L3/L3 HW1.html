@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=ru dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>L3 HW1 Solution</title>
+  </head>
+  <body>
+    <!-- Создайте текстовое поле и поместите небольшую надпись прямо в него. -->
+    <input type="text" name="text" value="text"> <br>
+    <br>
+    <!-- Добавьте текстовое поле, а также поле для ввода пароля.
+    Дополнительно объедините их в одну общую форму. -->
+    <form action="/" method="post">
+      <input type="text" name="login" placeholder="Логин" value="">
+      <input type="password" name="password" placeholder="Пароль" value=""> <br>
+    </form>
+    <br>
+    <!-- Создайте форму с полем для ввода имени, а также фамилии.
+    Добавьте возможность выбрать дату рождения, а также выбрать пол.
+    В конце добавьте две кнопки, которые будут отвечать за очистку форму, а также за её отправку.
+    К каждому полю должна быть также надпись.
+    Все должно быть оформлено как одна форма. Проверить на валидаторе, должно быть без ошибок. -->
+    <form action="/" method="post">
+      <label for="name">Имя:</label> <input type="text" id=name name="name" value="">
+      <label for="surname">Фамилия:</label> <input type="text" id=surname name="surname" value="">
+      <br>
+      <label for="birth">Дата рождения:</label> <input type="date" id=birth name="birth" value="">
+      <br>
+      <label>Пол:</label>
+      <label for="M">Мужской</label> <input type="radio" name=gender id=M value="">
+      <label for="W">Женский</label> <input type="radio" name=gender id=W value="">
+      <br>
+      <label for="agree">Даю согласие на обработку моих данных</label> <input type="checkbox" name="agreement" id=agree value="">
+      <br>
+      <input type="submit" value="Отправить">
+      <input type="reset" value="Очистить">
+    </form>
+  </body>
+</html>
