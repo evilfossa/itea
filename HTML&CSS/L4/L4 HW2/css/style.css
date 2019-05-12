@@ -1,0 +1,16 @@
+* {
+  font-size: 23px;
+  font-weight: bold;
+  color: blue;
+}
+
+div {
+  background-color: black;
+  color: white;
+}
+
+#part3 {
+  color: red;
+  background-color: greenyellow;
+  font-size: 0.5em;
+}
