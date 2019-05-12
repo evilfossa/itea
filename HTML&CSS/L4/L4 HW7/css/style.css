@@ -1,0 +1,64 @@
+.box-parametrs {
+  width: 40%;
+  background-color: rgb(226, 226, 226);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.box-head-info {
+  padding-bottom: 10px;
+}
+
+.div1-box-head-info {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.div2-box-head-info {
+  font-size: 16px;
+  font-weight: lighter;
+  padding-bottom: 15px;
+}
+
+.form-parametrs {
+
+}
+
+.form-email {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-password {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 80%;
+  height: 40px;
+}
+
+.form-checkbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-submit {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-terms {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-register {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
