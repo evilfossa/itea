@@ -1,0 +1,36 @@
+body {
+  padding: 15px;
+}
+
+.part1 {
+  width: 100%;
+  background-color: red;
+  margin-top: 10%;
+}
+
+.part2 {
+  height: 225px;
+  width: 340px;
+  border-radius: 15px;
+  border-style: inset;
+  padding: 10px;
+  text-align: justify;
+}
+
+.part3 {
+  height: 50px;
+  width: 50px;
+  border-style: solid;
+  background-color: yellow;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.part4 {
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  border-top-style: solid;
+  border-right-style: dotted;
+  background-color: #13ebde;
+}
