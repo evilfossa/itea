@@ -1,6 +1,6 @@
 .box-parametrs {
   width: 40%;
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(245, 245, 245);
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 25px;
@@ -38,9 +38,14 @@
   margin-bottom: 10px;
 }
 
+/* box-sizing: border-box; используется для принудительной установки размера блока */
+
 .form-input {
   width: 80%;
-  height: 40px;
+  height: 30px;
+  font-size: 12px;
+  padding: 5px
+  box-sizing: border-box;
 }
 
 .form-checkbox {
@@ -53,9 +58,21 @@
   margin-bottom: 10px;
 }
 
+.button-submit {
+  height: 35px;
+  width: 100px;
+  background-color: rgb(236, 81, 73);
+  border-style: none;
+  color: white;
+}
+
 .footer-terms {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.link-footer {
+  color: rgb(236, 81, 73);
 }
 
 .footer-register {
