@@ -1,0 +1,73 @@
+/* WARNING: Отошел от ТЗ, хотел сделать максимально приближенно к картике */
+
+body {
+  font-family: 'News Cycle', sans-serif;
+}
+
+.box {
+  width: 300px;
+  height: 480px;
+  background: linear-gradient(to top, rgb(145, 112, 59), rgb(39, 85, 124));
+  display: flex; /* Размещение блока в центе */
+  align-items: center; /* управляет выравниванием элементов по перекрёстной оси */
+  justify-content: center; /* управляет выравниванием элементов по главной оси */
+}
+
+.box-main {
+  width: 280px;
+  height: 460px;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  background: rgba(116, 116, 116, 0.1);
+}
+
+.box-center {
+  width: auto;
+  height: auto;
+  display: flex;  /* Размещение блока в центе */
+  align-items: center;  /* Размещение блока в центе */
+  justify-content: center;  /* Размещение блока в центе */
+}
+
+.box-2 {
+  width: 100%;
+  height: 110px;
+  border: 0px;
+  background: rgb(231, 100, 75);
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  display: flex; /* Размещение блока в центе */
+  align-items: center; /* Размещение блока в центе */
+  justify-content: center; /* Размещение блока в центе */
+}
+
+.box-3 {
+  width: 80%;
+  height: 145px;
+  margin-top: 20%;
+  border: 0px;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.box-3 ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  /* line-height: 2.2rem; */
+}
+
+.button {
+  width: 70%;
+  height: 40px;
+  background: rgb(231, 100, 75);
+  margin-top: 20%;
+  display: flex; /* Размещение блока в центе */
+  align-items: center; /* Размещение блока в центе */
+  justify-content: center; /* Размещение блока в центе */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
