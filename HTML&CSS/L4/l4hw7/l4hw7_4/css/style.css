@@ -1,0 +1,167 @@
+/* WARNING: Отошел от ТЗ, хотел сделать максимально приближенно к картике */
+
+body {
+  font-family: 'Playfair Display', serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background: rgb(236, 142, 68);
+  font-family: 'Playfair Display', serif;
+  display: flex; /* Размещение блока в центе */
+  align-items: center; /* управляет выравниванием элементов по перекрёстной оси */
+  justify-content: center; /* управляет выравниванием элементов по главной оси */
+}
+
+.header-div {
+  text-align: center;
+  line-height: 0;
+}
+
+.header-h1 {
+  font-size: 3.15em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  margin-top: 5%;
+}
+
+.header-span {
+  font-size: 1em;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+}
+
+.article-div-back {
+  /* width: 100%; */
+  /* height: auto; */
+  background: url(../img/back.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.article-div-inside {
+  text-align: center;
+}
+
+.article-div-inline {
+  display: inline-block;
+  margin-top: 40%;
+  margin-bottom: 10%;
+}
+
+.article-div-inline-span-1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.article-div-inline-span-2 {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+}
+
+.article-text-box-head {
+  text-align: center;
+}
+
+
+.article-text-h2-span {
+  color: rgb(66, 107, 205);
+  font-size: 2rem;
+}
+
+.article-text-h2 {
+  color: rgb(236, 142, 68);
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+
+.article-text-box-main span {
+text-align: center;
+display: block;
+}
+
+.article-text-box-main p {
+  text-align: center;
+}
+
+.article-text-box-main {
+margin-top: 12px;
+}
+
+.article-text-span-1 {
+  color: rgb(162, 153, 155);
+  font-size: 0.8rem;
+}
+
+.article-text-span-2 {
+  color: rgb(66, 107, 205);
+  font-size: 1.2rem;
+}
+
+.article-text-more-info-1 {
+  color: rgb(66, 107, 205);
+  font-size: 1.2rem;
+}
+
+.article-text-more-info-2 {
+  color: rgb(162, 153, 155);
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.article-text-more-info-span {
+  color: rgb(236, 142, 68);
+  font-size: 1.2rem;
+}
+
+footer {
+  display: block;
+  text-align: center;
+}
+
+.footer-text-box-contact h2 {
+  color: rgb(66, 107, 205);
+  font-size: 1.2rem;
+  font-weight: lighter;
+  margin-top: 12;
+  margin-bottom: 0;
+}
+
+.footer-text-box-contact div {
+  color: rgb(162, 153, 155);
+  font-size: 0.8rem;
+}
+
+.footer-text-box-1 a {
+  color: rgb(66, 107, 205);
+  text-decoration: none;
+}
+
+.footer-text-box-2 a {
+  color: rgb(236, 142, 68);
+}
+
+.footer-text-box-unsubscribe h3 {
+  color: rgb(236, 142, 68);
+  font-size: 1.2rem;
+  font-weight: lighter;
+  margin-top: 12;
+  margin-bottom: 0;
+}
+
+.footer-text-box-unsubscribe div {
+  color: rgb(162, 153, 155);
+  font-size: 0.8rem;
+}
+
+.footer-text-box-3 a {
+  color: rgb(236, 142, 68);
+  text-decoration: none;
+}
