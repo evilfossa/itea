@@ -1,0 +1,29 @@
+<!-- 
+    Определить какое из трех, введенных пользователем, чисел максимальное и вывести его на экран.
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW_L2_3</title>
+    <script type="text/javascript">
+       var a = parseFloat(prompt("Введите число a"));
+       var b = parseFloat(prompt("Введите число b"));
+       var c = parseFloat(prompt("Введите число c"));
+    //    var max = Math.max(a, b, c);
+       var max;
+       max = (a > b) ? a : b;
+       max = (max > c) ? max : c;
+
+    //    var max = (a >b && a > c) ? a :(b > a && b > c) ? b : c;
+
+       alert("Максимальное значение: "+max);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
