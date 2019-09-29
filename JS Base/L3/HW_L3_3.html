@@ -1,6 +1,10 @@
 <!-- Создать многомерный массив, размер массива получить от пользователя. Каждый нечётный подмассив заполнить 
 значением 'odd', а чётный - 'even'. Размер каждого вложенного массива - 3. -->
 
+<!-- odd,odd,odd
+even,even,even -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HW_L3_3</title>
     <script type="text/javascript">
+        var a = (parseFloat(prompt("Введита размер массива: ")));
+        if (isNaN(a)) {
+            alert("Похоже введенное вами значение не число :(");
+        }
+        // var c = "odd";
+        // var d = "even";
+        var array = new Array(a);
+        var count = 1;
         
+        // for-loop i=line
+        for (var i = 0; i < array.length; i++) {
+            //creating new array with length of 3
+            array[i] = new Array(3);
+          
+            for (var j = 0; j < array[i].length; j++) {
+                //              
+                if (i%2!=0) {
+                    //writing into array i=line j=column
+                    array[i][j] = "odd";
+                }
+                else {
+                    array[i][j] = "even";
+                }
+            }
+        }
+        // var cars = ["Saab", "Volvo", "BMW"];  cars[1]
+        //[1,2]   array[0,0]=1    
+        //[3,4]   array[1,0]
+
+        for (var i = 0; i < array.length; i++) {
+            document.write(array[i] + "<br/>");
+        }
+
+        console.log(array);
+        console.log("Длина массива составляет: " + array.length + " элементов!");
+
     </script>
 </head>
 <body>
