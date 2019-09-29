@@ -1,15 +1,5 @@
 <!-- 
     1. Сделать собственные примеры методов применяемых для массивов.
-
-    2. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет 
-    пользователь.
-
-    3. Создать многомерный массив, размер массива получить от пользователя. Каждый нечётный подмассив заполнить 
-    значением 'odd', а чётный - 'even'. Размер каждого вложенного массива - 3.
-
-    4. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, 
-    во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные 
-    из двух массивов и вывести их в одну строку.   
 -->
 
 <!DOCTYPE html>
@@ -20,25 +10,180 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HW_L3_1</title>
     <script type="text/javascript">
+
         // array
-        var myArray = ["Huawei", "Samsung", "Apple"];
-        console.log("Элемент под вторым номером массива: " + myArray[1]);
-        console.log("Все элементы массива: " + myArray);
-        console.log("Выыод первого и последнего элемента массива: " + myArray[0] + ", " + myArray[2]);
-        console.log("##########")
+            // var myArray = ["Huawei", "Samsung", "Apple"];
+            // console.log("Элемент под вторым номером массива: " + myArray[1]);
+            // console.log("Все элементы массива: " + myArray);
+            // console.log("Выыод первого и последнего элемента массива: " + myArray[0] + ", " + myArray[2]);
+
         // arrayContain
-        var arrayContain = [5];
-        arrayContain[0] = "Apple";
-        arrayContain[1] = "Samsung";
-        arrayContain[2] = "Huawei";
-        arrayContain[3] = "Meizu";
-        arrayContain[4] = "OnePlus";
-        arrayContain[5] = "LG";
-        console.log("Содержимое массива arrayContain: " + arrayContain);
+            // var arrayContain = [5];
+            //     arrayContain[0] = "Apple";
+            //     arrayContain[1] = "Samsung";
+            //     arrayContain[2] = "Huawei";
+            //     arrayContain[3] = "Meizu";
+            //     arrayContain[4] = "OnePlus";
+            //     arrayContain[5] = "LG";
+            // console.log("Содержимое массива arrayContain: " + arrayContain);
+
         // arrayLenght
-        var arrayLenght = arrayContain;
-        console.log("Длина массива arrayContain составляет: " + arrayLenght.length + " символов");
+            // console.log("Длина массива arrayContain составляет: " + arrayContain.length + " символов");
+
+            // arrayContain.length = 8; // массив увеличен на 2 элемента
+
+            //     for (var i = 0; i < arrayContain.length; i++) {
+            //         document.write(arrayContain[i] + "<br />");
+            //      }
+
+            // document.write("<hr />");
+
+            //  arrayContain.length = 3; // массив уменьшен до 3 элементов
+
+            //     for (var i = 0; i < arrayContain.length; i++) {
+            //         document.write(arrayContain[i] + "<br />");
+            //     }
+
+        // arrayChange
+            // var iPhone11ProMax = {
+            //     model: "iPhone 11,6",
+            //     cpu: "A13 Bionic",
+            //     ram: "4 GB",
+            //     storage: "Optional from 64GB to 512 GB"
+            // };
+            // var key = prompt("Какой параметр вас интересует? (model, cpu, ram, storage)");
+            // var value = iPhone11ProMax[key];
+            // alert(value);
+
+        // arrayInArray
+            // var matrix = [
+            //     ["iPhone XS", 64, 699],
+            //     ["iPhone XS Max", 64, 799],
+            //     ["iPhone 11 Pro", 64, 999],
+            //     ["iPhone 11 Pro Max", 64, 1099]
+            // ];
+            // console.log(matrix[0][0]);
+            // console.log(matrix[0][2]);
+            // console.log(matrix[0]);
         
+        // arrayInArray !! Не могу понять конструкцию файла 009
+            // var array = new Array(5);
+
+            // var count = 1;
+
+            //     for (var i = 0; i < array.length; i++) {
+            //         array[i] = new Array(10);
+          
+            //             for (var j = 0; j < array[i].length; j++) {
+            //                 array[i][j] = count++;
+            //             }
+            //     }
+
+            //     for (var i = 0; i < array.length; i++) {
+            //         document.write(array[i] + "<br/>");
+            //     }
+
+            // console.log(array);
+        
+        // Метод join() & split()
+            // var brands = ["Apple", "Samsung", "Huawei"];
+            // console.log("before join: " + brands);
+            // var changedArray = brands.join(" - ");
+            // console.log("after join: " + changedArray);
+            // var newArray = changedArray.split(" - ");
+            // console.log("after split: " + newArray);
+
+        // Метод concat()
+            // var vendors = ["Apple", "Samsung", "Huawei"];
+            // var models = ["iPhone", "Note 10", "P30 Pro"];
+            
+            // var newArray = vendors.concat(models);
+            // console.log(newArray);
+
+            // vendors = vendors.concat("Meizu", "Xiaomi");
+            // console.log(vendors);
+
+        // Метод reverse()
+            // var abc = ['a', 'b', 'c', 'd', 'e'];
+
+            // console.log("before reverse: " + abc);
+            // console.log("first item before reverse: " + abc[0]);
+            
+            // abc = abc.reverse();
+
+            // console.log("after reverse: " + abc);
+            // console.log("first item after reverse: " + abc[0]);
+
+        // Метод slice()
+            // var vendors = ["Apple", "Samsung", "Huawei", "Meizu", "Xiaomi"];
+            // console.log("before slice: " + vendors);
+
+            // vendors = vendors.slice(1, 3);
+            // console.log("after slice(1, 3): " + vendors);
+
+            // vendors = vendors.slice(1);
+            // console.log("after slice(1): " + vendors);
+
+            // vendors = vendors.slice(1, -1);
+            // console.log("after slice(1, -1): " + vendors);
+
+        // Метод splice()
+            // var vendors = ["Apple", "Samsung", "Huawei", "Meizu", "Xiaomi"];
+            // console.log("Исходный массив: " + vendors);
+
+            // // var cut = vendors.splice(0, 2);
+            // // console.log("Удаленные элементы массива: " + cut);
+            // // console.log("Оставшиеся элементы массива: " + vendors);
+
+            // vendors.splice(0, 2, "LG", "OnePlus", "Motorola");
+            // console.log("После вставки: " + vendors);
+
+        // Метод sort ()
+            // var vendors = ["Apple", "Samsung", "Huawei", "Meizu", "Xiaomi", "LG", "OnePlus", "Motorola"];
+            // console.log("Исходный массив: " + vendors);
+
+            // vendors.sort();
+            // console.log("После сортировки: " + vendors);
+
+        // Метод push ()
+            // var vendors = ["Apple", "Samsung", "Huawei", "Meizu", "Xiaomi"];
+            // console.log("Исходный массив: " + vendors);
+            // console.log("Длина массива: " + vendors.length);
+
+            // var newLenght = vendors.push(5);
+            // console.log("Новая длина массива: " + newLenght);
+            // console.log("Теперь массив имеет вид: " + vendors);
+
+            // vendors[5] = "Новый элемент массива";
+            // console.log("Теперь массив имеет вид: " + vendors);
+
+        // pop()
+            // var vendors = ["Apple", "Samsung", "Huawei", "Meizu", "Xiaomi"];
+            // console.log("Исходный массив: " + vendors);
+
+            // var del = vendors.pop();
+            // console.log("Теперь массив имеет вид: " + vendors);
+
+            // console.log("Удаленный элемент теперь в переменной del: " + del);
+
+        // unshift()
+            // var vendors = ["Apple", "Samsung", "Huawei", "Meizu", "Xiaomi"];
+            // console.log("Исходный массив: " + vendors);
+            // console.log("Длина массива: " + vendors.length);
+
+            // var newArray = vendors.unshift("Honor", "LG");
+            // console.log("Теперь массив имеет вид: " + vendors);
+            // console.log("И его длина составляет: " + vendors.length);
+            
+        // shift()
+        // var vendors = ["Apple", "Samsung", "Huawei", "Meizu", "Xiaomi"];
+        //     console.log("Исходный массив: " + vendors);
+        //     console.log("Длина массива: " + vendors.length);
+
+        //     var deletedItem = vendors.shift();
+        //     console.log("Теперь массив имеет вид: " + vendors);
+        //     console.log("И его длина составляет: " + vendors.length);
+
     </script>
 </head>
 <body>
