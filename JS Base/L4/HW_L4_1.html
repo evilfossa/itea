@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!-- Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, sign — 
-знак арифметической операции.
-Функция должна расчитывать результат операции, исходя из переданного ей знака. 
-Функция должна проверять корректность введенных чисел и знака операции.
-Все аргументы для функции принять от пользователя. -->
+<!-- Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, 
+    sign — знак арифметической операции. Функция должна расчитывать результат операции, исходя 
+    из переданного ей знака. Функция должна проверять корректность введенных чисел и знака операции.
+    Все аргументы для функции принять от пользователя. -->
 
 <html lang="en">
 <head>
@@ -11,6 +10,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HW_L4_1</title>
+    <script type="text/javascript">
+        var a = parseFloat(prompt("Введите первое число: "));
+        var sign = prompt("Что вы хотите сделать? ( + | - | * | / )");
+        var b = parseFloat(prompt("Введите второе значение: "));
+        var result;
+            function $calc(operand1, operand2, sign) {
+                if (isNaN(a && b)) {
+                    alert("Введенные вами числа не верные.");
+                }
+                else {
+                    if (sign == "+") {
+                        result = operand1 + operand2;
+                        // console.log(result);
+                    }
+                    else if (sign == "-") {
+                        result = operand1 - operand2;
+                        // console.log(result);
+                    }
+                    else if (sign == "*") {
+                        result = operand1 * operand2;
+                        // console.log(result);
+                    }
+                    else if (sign == "/") {
+                        result = operand1 / operand2;
+                        // console.log(result);
+                    }
+                    else {
+                        console.log("Что-то пошло не так :)");
+                    }
+                }
+                
+            }
+        $calc(a, b, sign);
+        document.write("Ваш ответ: " + result);
+    </script>
 </head>
 <body>
     
