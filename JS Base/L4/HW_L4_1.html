@@ -5,6 +5,7 @@
     Все аргументы для функции принять от пользователя. -->
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,38 +16,43 @@
         var sign = prompt("Что вы хотите сделать? ( + | - | * | / )");
         var b = parseFloat(prompt("Введите второе значение: "));
         var result;
-            function $calc(operand1, operand2, sign) {
-                if (isNaN(a && b)) {
-                    alert("Введенные вами числа не верные.");
-                }
-                else {
-                    if (sign == "+") {
-                        result = operand1 + operand2;
-                        // console.log(result);
-                    }
-                    else if (sign == "-") {
-                        result = operand1 - operand2;
-                        // console.log(result);
-                    }
-                    else if (sign == "*") {
-                        result = operand1 * operand2;
-                        // console.log(result);
-                    }
-                    else if (sign == "/") {
-                        result = operand1 / operand2;
-                        // console.log(result);
-                    }
-                    else {
-                        console.log("Что-то пошло не так :)");
-                    }
-                }
-                
+        function $calc(operand1, operand2, sign) {
+            if (isNaN(a && b)) {
+                alert("Введенные вами числа не верные.");
+                return;
             }
+            if (!(sign == "+" || sign == "-" || sign == "*" || sign == "/")) {
+                alert("Введенный вами знак не верный.");
+                return;
+            }
+            if (sign == "+") {
+                result = operand1 + operand2;
+                // console.log(result);
+            }
+            else if (sign == "-") {
+                result = operand1 - operand2;
+                // console.log(result);
+            }
+            else if (sign == "*") {
+                result = operand1 * operand2;
+                // console.log(result);
+            }
+            else if (sign == "/") {
+                result = operand1 / operand2;
+                // console.log(result);
+            }
+            else {
+                alert("Что-то пошло не так :(");
+            }
+
+        }
         $calc(a, b, sign);
         document.write("Ваш ответ: " + result);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
