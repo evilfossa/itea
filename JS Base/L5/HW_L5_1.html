@@ -6,15 +6,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script type="text/javascript">
+        
+        var max = 10;
+        var point = {
+            x: 5, 
+            y: -6
+        };
+        function GetQuadrant(point) {
+            if (point.x > 0 && point.y > 0) {
+                alert("X: "+point.x + " Y: " +point.y + "= Quadrant 1")
+            }
+            else if (point.x < 0 && point.y > 0) {
+                alert("X: "+point.x + " Y: " +point.y + "= Quadrant 2")
+            }
+            else if (point.x < 0 && point.y < 0) {
+                alert("X: "+point.x + " Y: " +point.y + "= Quadrant 3")
+            }
+            else if (point.x > 0 && point.y < 0) {
+                alert("X: "+point.x + " Y: " +point.y + "= Quadrant 4")
+            }
+            else {
+                alert("Nope")
+            }
+        }
+        while (true) {
+            point.x=Math.floor(Math.random() * Math.floor(max))-5
+            point.y=Math.floor(Math.random() * Math.floor(max))-5
+            GetQuadrant(point);
+        }
+
 
     </script>
 </body>
+
 </html>

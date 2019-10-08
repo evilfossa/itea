@@ -1,20 +1,68 @@
 <!-- 
-    Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного 
+    Создать объект Calculator, который должен содержать методы для расчета +, -, * и / 
     двух чисел. Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
     В зависимости от принятого знака операции, вызвать соответствующий метод. 
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script type="text/javascript">
-    
+        var a = parseFloat(prompt("Введите первое число: "));
+        var sign = prompt("Что вы хотите сделать? ( + | - | * | / )");
+        var b = parseFloat(prompt("Введите второе значение: "));
+        var result;
+        // Number test
+        if (isNaN(a && b)) {
+            alert("Введенные вами числа не верные.");
+        }
+        // Sign test
+        if (!(sign == "+" || sign == "-" || sign == "*" || sign == "/")) {
+            alert("Введенный вами знак не верный.");
+        }
+        // Calc function
+        function calc(operand1, operand2, sign) {
+            if (sign == "+") {
+                calculator.sum(operand1, operand2, sign);
+            }
+            else if (sign == "-") {
+                calculator.sub(operand1, operand2, sign);
+            }
+            else if (sign == "*") {
+                calculator.mult(operand1, operand2, sign);
+            }
+            else if (sign == "/") {
+                calculator.div(operand1, operand2, sign);
+            }
+            else {
+                alert("Что-то пошло не так :(");
+            }
+        };
+        var calculator = {
+            sum: function (operand1, operand2) {
+                result = operand1 + operand2;
+            },
+            sub: function (operand1, operand2) {
+                result = operand1 - operand2;
+            },
+            mult: function (operand1, operand2) {
+                result = operand1 * operand2;
+            },
+            div: function (operand1, operand2) {
+                result = operand1 / operand2;
+            }
+        };
+        calc(a, b, sign);
+        document.write("Ваш ответ: " + result);
     </script>
 </body>
+
 </html>
