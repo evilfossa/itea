@@ -8,32 +8,35 @@ Math.random() выдает произвольное число в промежу
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HW_L4_3</title>
 </head>
+
 <body>
     <script type="text/javascript">
-            function getRandom(max) {
-                var result = Math.floor(Math.random() * Math.floor(max));
-                console.log(result);
-                // return result;
-                if (result == 0) {
-                    alert("Rock")
-                }
-                else if (result == 1) {
-                    alert("Scissors")
-                }
-                else if (result == 2) {
-                    alert("Paper")
-                }
-                else {
-                    alert("Something went wrong.")
-                }
+        function getRandom(max) {
+            var result = Math.floor(Math.random() * Math.floor(max));
+            console.log(result);
+            // return result;
+            if (result == 0) {
+                alert("Rock")
             }
-            getRandom(3);
+            else if (result == 1) {
+                alert("Scissors")
+            }
+            else if (result == 2) {
+                alert("Paper")
+            }
+            else {
+                alert("Something went wrong.")
+            }
+        }
+        getRandom(3);
     </script>
 </body>
+
 </html>

@@ -2,12 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HW_L4_2</title>
 </head>
+
 <body>
     <script type="text/javascript">
 
@@ -15,23 +17,24 @@
         var a = parseFloat(prompt("Введите число, которое хотите вознести в степень: "));
         var b = parseFloat(prompt("Введите степень в которую хотите вознести число: "));
 
-            // Функция выполнения операции с вознесения числа в степень
-            function $degree (operand1, operand2) {
-                var result = 1;
-                    for (var i = 1; i < operand2 + 1; i++) {
-                        result = result * operand1;
-                    }
-                    
-                    // Выводим результат на экран
-                    document.write(a + "<sup>" + b + "</sup>=" + result);
-
-                // Возвращаем result
-                return result;
+        // Функция выполнения операции с вознесения числа в степень
+        function $degree(operand1, operand2) {
+            var result = 1;
+            for (var i = 1; i < operand2 + 1; i++) {
+                result = result * operand1;
             }
-            
+
+            // Выводим результат на экран
+            document.write(a + "<sup>" + b + "</sup>=" + result);
+
+            // Возвращаем result
+            return result;
+        }
+
         // Консоль ложим функцию $degree
         console.log($degree(a, b));
 
     </script>
 </body>
+
 </html>

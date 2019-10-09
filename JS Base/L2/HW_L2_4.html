@@ -6,34 +6,37 @@
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HW_L2_4</title>
     <script type="text/javascript">
-       var A = parseFloat(prompt("A = "));
+        var A = parseFloat(prompt("A = "));
         if (isNaN(A)) {
             alert("A не число!");
         }
-       var B = parseFloat(prompt("B = "));
-       if (isNaN(B)) {
+        var B = parseFloat(prompt("B = "));
+        if (isNaN(B)) {
             alert("B не число!");
         }
-       var sum = 0;
-       var uneqaul = "";
-        for (var i = A; i < (B+1); i++) {
+        var sum = 0;
+        var uneqaul = "";
+        for (var i = A; i < (B + 1); i++) {
             sum = i + sum;
-            if (i%2!=0) {
+            if (i % 2 != 0) {
                 uneqaul = uneqaul + i + " ";
             }
         }
-        alert("Сумма всех чисел расположенных в числовом промежутке от А до В: "+sum);
-        alert("Нечетные значения, расположенные в числовом промежутке от А до В: "+uneqaul);
+        alert("Сумма всех чисел расположенных в числовом промежутке от А до В: " + sum);
+        alert("Нечетные значения, расположенные в числовом промежутке от А до В: " + uneqaul);
 
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
