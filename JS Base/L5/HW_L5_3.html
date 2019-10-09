@@ -17,18 +17,8 @@
 <body>
     <script type="text/javascript">
         // Создаем пустой массив
-        var array = new Array;
-        // Создаем обьект
-        var obj = {
-            name: " ",
-            sName: " ",
-            age: " ",
-            occupation: " ",
-            // Создаем метод show, который выведет нам информацию на экран
-            show: function () {
-                document.write("Имя: " + obj.name + "<br> Фамилия: " + obj.sName + "<br> Возраст: " + obj.age + "<br> Позиция: " + obj.occupation + "<br><br>");
-            }
-        }
+        var array = [];
+
         // Создаем метод fill, который будет заполнять обьект данными, которые получаем от пользователя 
         function fill() {
             obj.name = prompt("Введите ваше имя: ");
@@ -36,17 +26,31 @@
             obj.age = prompt("Введите ваш возраст: ");
             obj.occupation = prompt("Введите вашу должность: ");
         }
-        // var newPerson = confirm("Хотите заполнить данные сотрудника?")
+
+        // Создаем цикл, который будет принимать информацию от пользователя и выводить ее на экран
         for (var i = 0; i < 2; i++) {
+            // Создаем обьект
+            var obj = {
+                name: " ",
+                sName: " ",
+                age: " ",
+                occupation: " ",
+                // Создаем метод show, который выведет нам информацию на экран
+                show: function () {
+                    document.write("Имя: " + obj.name + "<br> Фамилия: " + obj.sName + "<br> Возраст: " + obj.age + "<br> Позиция: " + obj.occupation + "<br><br>");
+                }
+            }
             // Вызываем метод fill
             fill();
             // Отправляем обьект в массив
             array.push(obj);
-            // newPerson = confirm("Хотите заполнить данные следующего сотрудника?")
-        }
-        for (var i = 0; i < array.length; i++) {
-            // obj.show();
+            // Вызиваем метод show
             array[i].show();
+        }
+
+        // Console log
+        for (var i = 0; i < array.length; i++) {
+            console.log(array[i]);
         }
     </script>
 </body>
