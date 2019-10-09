@@ -37,9 +37,18 @@
             obj.occupation = prompt("Введите вашу должность: ");
         }
         // Вызываем метод fill
-        fill();
+        // fill();
         // Отправляем обьект в массив
-        array.push(obj);
+        // array.push(obj);
+
+        var newPerson = confirm("Хотите заполнить данные следующего сотрудника?")
+        for (var i = 0; i = newPerson; i++) {
+            fill();
+            array.push(obj);
+            newPerson = confirm("Хотите заполнить данные следующего сотрудника?")
+        }
+
+
         // Вызываем метод show
         obj.show();
     </script>
