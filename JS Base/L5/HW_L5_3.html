@@ -26,7 +26,7 @@
             occupation: " ",
             // Создаем метод show, который выведет нам информацию на экран
             show: function () {
-                document.write("Имя: " + obj.name + "<br> Фамилия: " + obj.sName + "<br> Возраст: " + obj.age + "<br> Позиция: " + obj.occupation);
+                document.write("Имя: " + obj.name + "<br> Фамилия: " + obj.sName + "<br> Возраст: " + obj.age + "<br> Позиция: " + obj.occupation + "<br><br>");
             }
         }
         // Создаем метод fill, который будет заполнять обьект данными, которые получаем от пользователя 
@@ -41,16 +41,18 @@
         // Отправляем обьект в массив
         // array.push(obj);
 
-        var newPerson = confirm("Хотите заполнить данные следующего сотрудника?")
-        for (var i = 0; i = newPerson; i++) {
+        var newPerson = confirm("Хотите заполнить данные сотрудника?")
+        for (var i = 0; i < 2; i++) {
             fill();
             array.push(obj);
             newPerson = confirm("Хотите заполнить данные следующего сотрудника?")
         }
-
+        for (var i = 0; i < array.length; i++) {
+            array[i].show();
+        }
 
         // Вызываем метод show
-        obj.show();
+        // obj.show();
     </script>
 </body>
 
