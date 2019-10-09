@@ -6,15 +6,43 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script type="text/javascript">
-
+        // Создаем пустой массив
+        var array = new Array;
+        // Создаем обьект
+        var obj = {
+            name: " ",
+            sName: " ",
+            age: " ",
+            occupation: " ",
+            // Создаем метод show, который выведет нам информацию на экран
+            show: function () {
+                document.write("Имя: " + obj.name + "<br> Фамилия: " + obj.sName + "<br> Возраст: " + obj.age + "<br> Позиция: " + obj.occupation);
+            }
+        }
+        // Создаем метод fill, который будет заполнять обьект данными, которые получаем от пользователя 
+        function fill() {
+            obj.name = prompt("Введите ваше имя: ");
+            obj.sName = prompt("Введите вашу фамилию: ");
+            obj.age = prompt("Введите ваш возраст: ");
+            obj.occupation = prompt("Введите вашу должность: ");
+        }
+        // Вызываем метод fill
+        fill();
+        // Отправляем обьект в массив
+        array.push(obj);
+        // Вызываем метод show
+        obj.show();
     </script>
 </body>
+
 </html>
