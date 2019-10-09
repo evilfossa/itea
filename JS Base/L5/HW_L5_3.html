@@ -36,23 +36,18 @@
             obj.age = prompt("Введите ваш возраст: ");
             obj.occupation = prompt("Введите вашу должность: ");
         }
-        // Вызываем метод fill
-        // fill();
-        // Отправляем обьект в массив
-        // array.push(obj);
-
-        var newPerson = confirm("Хотите заполнить данные сотрудника?")
+        // var newPerson = confirm("Хотите заполнить данные сотрудника?")
         for (var i = 0; i < 2; i++) {
+            // Вызываем метод fill
             fill();
+            // Отправляем обьект в массив
             array.push(obj);
-            newPerson = confirm("Хотите заполнить данные следующего сотрудника?")
+            // newPerson = confirm("Хотите заполнить данные следующего сотрудника?")
         }
         for (var i = 0; i < array.length; i++) {
+            // obj.show();
             array[i].show();
         }
-
-        // Вызываем метод show
-        // obj.show();
     </script>
 </body>
 
