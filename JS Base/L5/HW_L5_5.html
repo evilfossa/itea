@@ -17,6 +17,87 @@
 <body>
     <script type="text/javascript">
 
+        // Создаем пустой массив
+        var array = [];
+
+        // Создаем глобальную переменную n для ответа пользователя
+        var n;
+
+        // Функция которая будет спрашивать пользователя хочет ли он добавить сотрудника
+        function ask() {
+            n = confirm("Хотите добавить сотрудника?");
+        };
+
+        // Создаем функцию fill, которая будет заполнять обьект данными, получаемыми от пользователя
+        function fill() {
+            obj.name = prompt("Введите ваше имя: ");
+            obj.sName = prompt("Введите вашу фамилию: ");
+            obj.age = prompt("Введите ваш возраст: ");
+            obj.occupation = prompt("Введите вашу должность: ");
+        };
+
+        // Создаем функцию salary, которая будет проверять зарплату сотрудника
+        function salary(occupation) {
+            if (occupation == "director") {
+                obj.salary = "3000 USD"
+                return;
+            }
+            if (occupation == "manager") {
+                obj.salary = "1500 USD"
+                return;
+            }
+            if (occupation == "programmer") {
+                obj.salary = "2000 USD"
+                return;
+            }
+            if (!(occupation == "director" || occupation == "manager" || occupation == "programmer")) {
+                obj.salary = "1000 USD"
+                return;
+            }
+        }
+
+        // Вызиваем функцию ask
+        ask();
+
+        // Используем while для непрерывного ввода пользователей
+        while (n == true) {
+            // Создаем цикл, который будет принимать информацию от пользователя и выводить ее на экран
+            for (var i = 0; i < 1; i++) {
+                // Создаем обьект
+                var obj = {
+                    name: " ",
+                    sName: " ",
+                    age: " ",
+                    occupation: " ",
+                    salary: " ",
+                    // Создаем метод show, который выведет нам информацию на экран
+                    show: function () {
+                        // document.getElementById("someText").innerHTML = ("Имя: " + obj.name + "<br>Фамилия: " + obj.sName + "<br>Возраст: " + obj.age + "<br>Должность: " + obj.occupation + "<br> Зарплата: " + obj.salary + "<br><br>");
+                        document.write("Имя: " + obj.name + "<br>Фамилия: " + obj.sName + "<br>Возраст: " + obj.age + "<br>Должность: " + obj.occupation + "<br>Зарплата: " + obj.salary + "<br><br>");
+                    },
+                    //
+                    sort: function () {
+
+                    }
+                }
+                // Вызываем метод fill
+                fill();
+                // Вызываем функцию проверки зарплаты
+                salary(obj.occupation);
+                // Отправляем обьект в массив
+                array.push(obj);
+                // Вызиваем метод show
+                array[i].show();
+            }
+            // Вызиваем функцию ask 
+            ask();
+        }
+
+        // Console log
+        for (var i = 0; i < array.length; i++) {
+            console.log(array[i]);
+        }
+
     </script>
 </body>
 
