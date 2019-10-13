@@ -23,6 +23,9 @@
         // Создаем глобальную переменную n для ответа пользователя
         var n;
 
+        // Создаем глобальную переменную sort для выбора сортировки
+        var sort;
+
         // Функция которая будет спрашивать пользователя хочет ли он добавить сотрудника
         function ask() {
             n = confirm("Хотите добавить сотрудника?");
@@ -39,20 +42,68 @@
         // Создаем функцию salary, которая будет проверять зарплату сотрудника
         function salary(occupation) {
             if (occupation == "director") {
-                obj.salary = "3000 USD"
+                obj.salary = 3000;
                 return;
             }
             if (occupation == "manager") {
-                obj.salary = "1500 USD"
+                obj.salary = 1500;
                 return;
             }
             if (occupation == "programmer") {
-                obj.salary = "2000 USD"
+                obj.salary = 2000;
                 return;
             }
             if (!(occupation == "director" || occupation == "manager" || occupation == "programmer")) {
-                obj.salary = "1000 USD"
+                obj.salary = 1000;
                 return;
+            }
+        }
+
+        // 
+        function sort() {
+            sort = prompt("По какому параметру вы хотите отсортировать массив? \nName \nSurname \nAge \nOccupation \nSalary \nСделайте ваш выбор.")
+            if (sort == "Name") {
+                const sortedByName = array.sort(function (a, b) {
+                    if (a.name > b.name) {
+                        return 1;
+                    }
+                    else {
+                        return -1;
+                    }
+                });
+            }
+            else if (sort == "Surname") {
+                const sortedBySname = array.sort(function (a, b) {
+                    if (a.sName > b.sName) {
+                        return 1;
+                    }
+                    else {
+                        return -1;
+                    }
+                });
+            }
+            else if (sort == "Age") {
+                const sortedByAge = array.sort(function (a, b) {
+                    return a.age - b.age;
+                });
+            }
+            else if (sort == "Occupation") {
+                const sortedByOccupation = array.sort(function (a, b) {
+                    if (a.occupation > b.occupation) {
+                        return 1;
+                    }
+                    else {
+                        return -1;
+                    }
+                });
+            }
+            else if (sort == "Salary") {
+                const sortedBySalary = array.sort(function (a, b) {
+                    return a.salary - b.salary;
+                });
+            }
+            else {
+                alert("Sort error");
             }
         }
 
@@ -74,10 +125,6 @@
                     show: function () {
                         // document.getElementById("someText").innerHTML = ("Имя: " + obj.name + "<br>Фамилия: " + obj.sName + "<br>Возраст: " + obj.age + "<br>Должность: " + obj.occupation + "<br> Зарплата: " + obj.salary + "<br><br>");
                         document.write("Имя: " + obj.name + "<br>Фамилия: " + obj.sName + "<br>Возраст: " + obj.age + "<br>Должность: " + obj.occupation + "<br>Зарплата: " + obj.salary + "<br><br>");
-                    },
-                    //
-                    sort: function () {
-
                     }
                 }
                 // Вызываем метод fill
@@ -91,9 +138,13 @@
             }
             // Вызиваем функцию ask 
             ask();
+
         }
 
-        // Console log
+        // Вызываем метод sort
+        sort();
+
+
         for (var i = 0; i < array.length; i++) {
             console.log(array[i]);
         }
