@@ -15,12 +15,13 @@
 </head>
 
 <body>
+    <div id="someText"></div>
     <script type="text/javascript">
 
         // Создаем пустой массив
         var array = [];
 
-        // Создаем глобальную переменную n
+        // Создаем глобальную переменную n для ответа пользователя
         var n;
 
         // Функция которая будет спрашивать пользователя хочет ли он добавить сотрудника
@@ -28,48 +29,48 @@
             n = confirm("Хотите добавить сотрудника?");
         };
 
+        // Создаем метод fill, который будет заполнять обьект данными, которые получаем от пользователя
+        function fill() {
+            obj.name = prompt("Введите ваше имя: ");
+            obj.sName = prompt("Введите вашу фамилию: ");
+            obj.age = prompt("Введите ваш возраст: ");
+            obj.occupation = prompt("Введите вашу должность: ");
+        };
+
         // Вызиваем функцию ask
         ask();
 
-        if (n == true) {
-            do {
-                // Создаем метод fill, который будет заполнять обьект данными, которые получаем от пользователя
-                function fill() {
-                    obj.name = prompt("Введите ваше имя: ");
-                    obj.sName = prompt("Введите вашу фамилию: ");
-                    obj.age = prompt("Введите ваш возраст: ");
-                    obj.occupation = prompt("Введите вашу должность: ");
-                }
-                // Создаем цикл, который будет принимать информацию от пользователя и выводить ее на экран
-                for (var i = 0; i < 1; i++) {
-                    // Создаем обьект
-                    var obj = {
-                        name: " ",
-                        sName: " ",
-                        age: " ",
-                        occupation: " ",
-                        // Создаем метод show, который выведет нам информацию на экран
-                        show: function () {
-                            document.write("Имя: " + obj.name + "<br> Фамилия: " + obj.sName + "<br> Возраст: " + obj.age + "<br> Позиция: " + obj.occupation + "<br><br>");
-                        }
+        while (n == true) {
+            // Создаем цикл, который будет принимать информацию от пользователя и выводить ее на экран
+            for (var i = 0; i < 1; i++) {
+                // Создаем обьект
+                var obj = {
+                    name: " ",
+                    sName: " ",
+                    age: " ",
+                    occupation: " ",
+                    // Создаем метод show, который выведет нам информацию на экран
+                    show: function () {
+                        document.getElementById("someText").innerHTML = ("Имя: " + obj.name + "<br>Фамилия: " + obj.sName + "<br>Возраст: " + obj.age + "<br>Должность: " + obj.occupation + "<br><br>");
+                        // document.write("Имя: " + obj.name + "<br> Фамилия: " + obj.sName + "<br> Возраст: " + obj.age + "<br> Позиция: " + obj.occupation + "<br><br>");
                     }
-                    // Вызываем метод fill
-                    fill();
-                    // Отправляем обьект в массив
-                    array.push(obj);
-                    // Вызиваем метод show
-                    array[i].show();
                 }
-                // Вызиваем функцию ask 
-                ask();
-            } while (n == true);
-        }
-        else {
-            // Console log
-            for (var i = 0; i < array.length; i++) {
-                console.log(array[i]);
+                // Вызываем метод fill
+                fill();
+                // Отправляем обьект в массив
+                array.push(obj);
+                // Вызиваем метод show
+                array[i].show();
             }
+            // Вызиваем функцию ask 
+            ask();
         }
+
+        // Console log
+        for (var i = 0; i < array.length; i++) {
+            console.log(array[i]);
+        }
+
     </script>
 </body>
 
