@@ -31,6 +31,11 @@
             n = confirm("Хотите добавить сотрудника?");
         };
 
+        // Функция которая будет спрашивать пользователя хочет ли отсортировать массив
+        function askSort() {
+            m = confirm("Хотите отсортировать массив?");
+        };
+
         // Создаем функцию fill, которая будет заполнять обьект данными, получаемыми от пользователя
         function fill() {
             obj.name = prompt("Введите ваше имя: ");
@@ -41,27 +46,33 @@
 
         // Создаем функцию salary, которая будет проверять зарплату сотрудника
         function salary(occupation) {
-            if (occupation == "director") {
-                obj.salary = 3000;
+
+            if (occupation == "Director" || occupation == "director" || occupation == "Директор" || occupation == "директор") {
+                obj.salary = 3000 + " USD";
                 return;
             }
-            if (occupation == "manager") {
-                obj.salary = 1500;
+
+            else if (occupation == "Manager" || occupation == "manager" || occupation == "Менеджер" || occupation == "менеджер") {
+                obj.salary = 1500 + " USD";
                 return;
             }
-            if (occupation == "programmer") {
-                obj.salary = 2000;
+
+            else if (occupation == "Programmer" || occupation == "programmer" || occupation == "Программист" || occupation == "программист") {
+                obj.salary = 2000 + " USD";
                 return;
             }
-            if (!(occupation == "director" || occupation == "manager" || occupation == "programmer")) {
-                obj.salary = 1000;
+
+            else {
+                obj.salary = 1000 + " USD";
                 return;
             }
         }
 
-        // 
+        // Создаем функцию sort которая будет принимать значение от пользовтеля и делать сортировку ао его выбору
         function sort() {
+            
             sort = prompt("По какому параметру вы хотите отсортировать массив? \nName \nSurname \nAge \nOccupation \nSalary \nСделайте ваш выбор.")
+            
             if (sort == "Name") {
                 const sortedByName = array.sort(function (a, b) {
                     if (a.name > b.name) {
@@ -72,6 +83,7 @@
                     }
                 });
             }
+
             else if (sort == "Surname") {
                 const sortedBySname = array.sort(function (a, b) {
                     if (a.sName > b.sName) {
@@ -82,11 +94,13 @@
                     }
                 });
             }
+
             else if (sort == "Age") {
                 const sortedByAge = array.sort(function (a, b) {
                     return a.age - b.age;
                 });
             }
+
             else if (sort == "Occupation") {
                 const sortedByOccupation = array.sort(function (a, b) {
                     if (a.occupation > b.occupation) {
@@ -97,11 +111,13 @@
                     }
                 });
             }
+
             else if (sort == "Salary") {
                 const sortedBySalary = array.sort(function (a, b) {
                     return a.salary - b.salary;
                 });
             }
+
             else {
                 alert("Sort error");
             }
@@ -123,7 +139,6 @@
                     salary: " ",
                     // Создаем метод show, который выведет нам информацию на экран
                     show: function () {
-                        // document.getElementById("someText").innerHTML = ("Имя: " + obj.name + "<br>Фамилия: " + obj.sName + "<br>Возраст: " + obj.age + "<br>Должность: " + obj.occupation + "<br> Зарплата: " + obj.salary + "<br><br>");
                         document.write("Имя: " + obj.name + "<br>Фамилия: " + obj.sName + "<br>Возраст: " + obj.age + "<br>Должность: " + obj.occupation + "<br>Зарплата: " + obj.salary + "<br><br>");
                     }
                 }
@@ -134,18 +149,27 @@
                 // Отправляем обьект в массив
                 array.push(obj);
                 // Вызиваем метод show
-                array[i].show();
+                // array[i].show();
             }
             // Вызиваем функцию ask 
             ask();
+        }
+
+        // Вызываем функцию askSort
+        askSort();
+
+        // Если true то запускаем функцию sort
+        if (m == true) {
+            // Вызываем метод sort
+            sort();
+        }
+        else { 
 
         }
 
-        // Вызываем метод sort
-        sort();
-
-
+        // Выводим результат на экран и в консоль
         for (var i = 0; i < array.length; i++) {
+            document.write("Имя: " + array[i].name + "<br>Фамилия: " + array[i].sName + "<br>Возраст: " + array[i].age + "<br>Должность: " + array[i].occupation + "<br>Зарплата: " + array[i].salary + "<br><br>");
             console.log(array[i]);
         }
 
