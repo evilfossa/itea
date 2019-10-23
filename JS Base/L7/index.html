@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f20231ab05.js"></script>
-    <script src="./js/main.js"></script>
+
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 <li class="separator"><a href="#">|</a></li>
                 <li><a href="#">My wishlist</a></li>
                 <li class="separator"><a href="#">|</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="#" onclick="document.getElementById('modal-wrapper').style.display='block'">Login</a></li>
             </ul>
         </div>
     </header>
@@ -232,6 +232,34 @@
                 </div>
             </div>
         </div>
+
+        <div id="modal-wrapper" class="modal">
+
+            <div class="modal_box">
+
+
+                <form action="/">
+                    <h1>sign in</h1>
+
+                    <div class="container">
+                        <input type="text" placeholder="username" name="uname">
+                        <input type="password" placeholder="password" name="psw">
+                    </div>
+
+                    <div class="bottomContainer">
+                        <input type="checkbox"> Keep me sign in
+                        <button type="submit">SIGN IN</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+
+
     </div>
     <footer>
         <div class="footer-container wrapper">
@@ -311,6 +339,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

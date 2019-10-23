@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal Content Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 25% auto 15% auto;
+    border: 1px solid #888;
+    width: 40%;
+    padding-bottom: 30px;
+}
+
+.container {
+    text-align: center;
+    margin: 12px 0 12px 0;
+    position: relative;
+}
+
+.container h1 {
+    color: #f0995d;
+    text-align: left;
+}
+
+.bottomContainer {
+    text-align: left;
+    margin: 12px 0 12px 32px;
+    position: relative;
+}
+
+
+/* Full-width input fields */
+
+input[type=text],
+input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: inline-block;
+    border: none;
+    border-left: 5px solid #f0995d;
+    background-color: #ebebeb;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #f0995d;
+    color: white;
+    padding: 14px 20px;
+    margin: 0px 70%;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    font-size: 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    animation: zoom 0.6s
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
