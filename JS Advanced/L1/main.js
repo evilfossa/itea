@@ -38,3 +38,17 @@
       myNumber.toString(16) // fb
 
 */
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var r = getRandomIntInclusive(0, 255);
+var g = getRandomIntInclusive(0, 255);
+var b = getRandomIntInclusive(0, 255);
+
+console.log("R:" + r + " G:" + g + " B:" + b);
+
+document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
