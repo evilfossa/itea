@@ -38,6 +38,9 @@
       myNumber.toString(16) // fb
 
 */
+var r = getRandomIntInclusive(0, 255);
+var g = getRandomIntInclusive(0, 255);
+var b = getRandomIntInclusive(0, 255);
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -45,10 +48,14 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var r = getRandomIntInclusive(0, 255);
-var g = getRandomIntInclusive(0, 255);
-var b = getRandomIntInclusive(0, 255);
-
 console.log("R:" + r + " G:" + g + " B:" + b);
 
 document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+function ChangeColor() {
+  let r = getRandomIntInclusive(0, 255);
+  let g = getRandomIntInclusive(0, 255);
+  let b = getRandomIntInclusive(0, 255);
+  document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+  console.log("R:" + r + " G:" + g + " B:" + b);
+}
