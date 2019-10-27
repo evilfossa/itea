@@ -55,10 +55,18 @@ function getRandomColor() {
 
 function changeColor() {
   getRandomColor();
+  textMainColor();
   document.body.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
 }
 
+function textMainColor() {
+  let text = document.getElementById("text")
+  text.className = "text";
+  text.innerText = 'R: ' + color[0] + ' G: ' + color[1] + ' B: ' + color[2];
+}
+
 document.body.onload = changeColor();
+document.body.onload = textMainColor();
 
 // Div creating
 
@@ -67,10 +75,9 @@ function createDiv() {
   let div = document.createElement('div');
   div.id = "createArea";
   div.className = "divClassName";
-  div.innerText = "Some Text";
+  div.innerText = 'R: ' + color[0] + ' G: ' + color[1] + ' B: ' + color[2];
   div.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
   document.body.appendChild(div);
-  // document.getElementById('createArea').replaceChild(div);
 }
 
 function removeDiv() {
