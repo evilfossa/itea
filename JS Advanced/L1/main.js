@@ -62,3 +62,15 @@ function changeColor() {
 document.body.onload = changeColor();
 
 // Создать кнопку
+var createArea = document.getElementById('createArea');
+
+var div = document.createElement('div');
+div.innerText = "Some Text";
+div.style.backgroundColor = "red";
+div.style.width = "150px";
+div.style.height = "150px";
+div.style.position = "absolute";
+div.style.left = "25%";
+div.style.top = "25%";
+console.log('MyDivElement:', div);
+createArea.appendChild(div);
