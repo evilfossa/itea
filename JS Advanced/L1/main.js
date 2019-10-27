@@ -77,3 +77,10 @@ function createDiv() {
   createArea.appendChild(div);
 
 }
+
+function deleteDiv() {
+
+  let div = document.getElementById("createArea");
+  div.remove();
+
+}
