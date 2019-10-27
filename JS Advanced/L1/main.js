@@ -38,9 +38,8 @@
       myNumber.toString(16) // fb
 
 */
-var r = getRandomIntInclusive(0, 255);
-var g = getRandomIntInclusive(0, 255);
-var b = getRandomIntInclusive(0, 255);
+
+var color = new Array(3);
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -48,14 +47,20 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log("R:" + r + " G:" + g + " B:" + b);
+function getRandomColor() {
+  for (let i = 0; i < color.length; i++) {
+    color[i] = getRandomIntInclusive(0, 255)
+  }
+}
 
-document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+document.body.onload = function loadColor() {
+  getRandomColor();
+  document.body.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
+  console.log("R:" + color[0] + " G:" + color[1] + " B:" + color[2]);
+}
 
 function ChangeColor() {
-  let r = getRandomIntInclusive(0, 255);
-  let g = getRandomIntInclusive(0, 255);
-  let b = getRandomIntInclusive(0, 255);
-  document.body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-  console.log("R:" + r + " G:" + g + " B:" + b);
+  getRandomColor();
+  document.body.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
+  console.log("R:" + color[0] + " G:" + color[1] + " B:" + color[2]);
 }
