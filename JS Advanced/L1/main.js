@@ -62,16 +62,15 @@ document.body.onload = changeColor();
 
 // Div creating
 
-var createArea = document.getElementById('createArea');
-
 function createDiv() {
-
   getRandomColor();
   let div = document.createElement('div');
+  div.id = "createArea";
   div.className = "divClassName";
   div.innerText = "Some Text";
   div.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
-  createArea.appendChild(div);
+  document.body.appendChild(div);
+  // document.getElementById('createArea').replaceChild(div);
 }
 
 function removeDiv() {
