@@ -65,10 +65,11 @@ document.body.onload = changeColor();
 var createArea = document.getElementById('createArea');
 
 function createDiv() {
-
+  getRandomColor();
   let div = document.createElement('div');
   div.innerText = "Some Text";
-  div.style.backgroundColor = "red";
+  // div.style.backgroundColor = "red";
+  div.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
   div.style.width = "150px";
   div.style.height = "150px";
   div.style.position = "absolute";
@@ -80,7 +81,7 @@ function createDiv() {
 
 function deleteDiv() {
 
-  let div = document.getElementById("createArea");
-  div.remove();
+  let div1 = document.getElementById("createArea");
+  div1.remove();
 
 }
