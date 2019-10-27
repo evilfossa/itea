@@ -59,7 +59,7 @@ document.body.onload = function loadColor() {
   console.log("R:" + color[0] + " G:" + color[1] + " B:" + color[2]);
 }
 
-function ChangeColor() {
+function changeColor() {
   getRandomColor();
   document.body.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
   console.log("R:" + color[0] + " G:" + color[1] + " B:" + color[2]);
