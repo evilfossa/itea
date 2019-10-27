@@ -1,0 +1,8 @@
+.divClassName {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}

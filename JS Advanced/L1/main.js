@@ -56,32 +56,35 @@ function getRandomColor() {
 function changeColor() {
   getRandomColor();
   document.body.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
-  console.log("R:" + color[0] + " G:" + color[1] + " B:" + color[2]);
 }
 
 document.body.onload = changeColor();
 
-// Создать кнопку
+// Div creating
+
 var createArea = document.getElementById('createArea');
 
 function createDiv() {
+
   getRandomColor();
   let div = document.createElement('div');
+  div.className = "divClassName";
   div.innerText = "Some Text";
-  // div.style.backgroundColor = "red";
   div.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
-  div.style.width = "150px";
-  div.style.height = "150px";
-  div.style.position = "absolute";
-  div.style.left = "25%";
-  div.style.top = "25%";
   createArea.appendChild(div);
-
 }
 
-function deleteDiv() {
+function removeDiv() {
+  let div = document.getElementById("createArea");
+  div.remove();
+}
 
-  let div1 = document.getElementById("createArea");
-  div1.remove();
+function showDiv() {
+  let div = document.getElementById("createArea");
+  div.style.display = "block";
+}
 
+function hideDiv() {
+  let div = document.getElementById("createArea");
+  div.style.display = "none";
 }
