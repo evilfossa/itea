@@ -22,11 +22,11 @@ var images = ['images/cat1.jpg', 'images/cat2.jpg', 'images/cat3.jpg', 'images/c
 var num = 0;
 var prev = document.getElementById('PrevSilde');
 var next = document.getElementById('NextSilde');
+var slider = document.getElementById('slider');
 
 function image() {
-  let slider = document.getElementById('slider');
-  let img = document.createElement('img');
-  num++;
+  slider.innerHTML = '';
+  var img = new Image();
   if (num >= images.length) {
     num = 0;
   } else if (num < 0) {
@@ -34,7 +34,7 @@ function image() {
   }
   img.src = images[num];
   slider.appendChild(img);
-}
+};
 
 prev.addEventListener('click', function() {
   num--;
@@ -44,4 +44,4 @@ prev.addEventListener('click', function() {
 next.addEventListener('click', function() {
   num++;
   image();
-})
+});
