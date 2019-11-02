@@ -70,14 +70,19 @@ document.body.onload = textMainColor();
 
 // Div creating
 
+var div = document.createElement('div');
+var span = document.createElement('span');
+
 function createDiv() {
+  div.innerHTML = '';
   getRandomColor();
-  let div = document.createElement('div');
   div.id = "createArea";
   div.className = "divClassName";
-  div.innerText = 'R: ' + color[0] + ' G: ' + color[1] + ' B: ' + color[2];
+  span.innerText = 'R: ' + color[0] + ' G: ' + color[1] + ' B: ' + color[2];
+  span.className = "text";
   div.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
   document.body.appendChild(div);
+  div.appendChild(span);
 }
 
 function removeDiv() {
