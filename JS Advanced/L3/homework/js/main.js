@@ -18,5 +18,30 @@
 
 */
 
-  var OurSliderImages = ['images/cat1.jpg', 'images/cat2.jpg', 'images/cat3.jpg', 'images/cat4.jpg', 'images/cat5.jpg', 'images/cat6.jpg', 'images/cat7.jpg', 'images/cat8.jpg'];
-  var currentPosition = 0;
+var images = ['images/cat1.jpg', 'images/cat2.jpg', 'images/cat3.jpg', 'images/cat4.jpg', 'images/cat5.jpg', 'images/cat6.jpg', 'images/cat7.jpg', 'images/cat8.jpg'];
+var num = 0;
+var prev = document.getElementById('PrevSilde');
+var next = document.getElementById('NextSilde');
+
+function image() {
+  let slider = document.getElementById('slider');
+  let img = document.createElement('img');
+  num++;
+  if (num >= images.length) {
+    num = 0;
+  } else if (num < 0) {
+    num = images.length - 1;
+  }
+  img.src = images[num];
+  slider.appendChild(img);
+}
+
+prev.addEventListener('click', function() {
+  num--;
+  image();
+});
+
+next.addEventListener('click', function() {
+  num++;
+  image();
+})
