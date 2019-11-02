@@ -24,6 +24,12 @@ var prev = document.getElementById('PrevSilde');
 var next = document.getElementById('NextSilde');
 var slider = document.getElementById('slider');
 
+window.onload = function(){
+  var img = new Image();
+  img.src = images[0];
+  slider.appendChild(img);
+};
+
 function image() {
   slider.innerHTML = '';
   var img = new Image();
