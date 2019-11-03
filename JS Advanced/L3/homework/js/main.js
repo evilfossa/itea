@@ -23,8 +23,11 @@ var num = 0;
 var prev = document.getElementById('PrevSilde');
 var next = document.getElementById('NextSilde');
 var slider = document.getElementById('slider');
+var element = document.querySelector('#slider');
 
-window.onload = function(){
+console.log(element);
+
+window.onload = function () {
   var img = new Image();
   img.src = images[0];
   slider.appendChild(img);
@@ -40,14 +43,25 @@ function image() {
   }
   img.src = images[num];
   slider.appendChild(img);
+
 };
 
-prev.addEventListener('click', function() {
+prev.addEventListener('click', function () {
+  element.classList.add('animated', 'fadeIn')
+  element.addEventListener('animationend', function() { 
+    element.classList.remove('animated', 'fadeIn');
+  });
+  console.log(element);
   num--;
   image();
 });
 
-next.addEventListener('click', function() {
+next.addEventListener('click', function () {
+  element.classList.add('animated', 'fadeIn')
+  element.addEventListener('animationend', function() { 
+    element.classList.remove('animated', 'fadeIn');
+  });
+  console.log(element);
   num++;
   image();
 });
