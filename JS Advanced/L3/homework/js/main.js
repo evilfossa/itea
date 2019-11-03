@@ -28,6 +28,10 @@ var element = document.querySelector('#slider');
 console.log(element);
 
 window.onload = function () {
+  element.classList.add('animated', 'fadeIn')
+  element.addEventListener('animationend', function() { 
+    element.classList.remove('animated', 'fadeIn');
+  });
   var img = new Image();
   img.src = images[0];
   slider.appendChild(img);
