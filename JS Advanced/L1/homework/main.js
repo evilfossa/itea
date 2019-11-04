@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-trailing-spaces */
 /*
 
   Задание 1.
@@ -39,7 +41,7 @@
 
 */
 
-var color = new Array(3);
+const color = new Array(3);
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -48,54 +50,51 @@ function getRandomIntInclusive(min, max) {
 }
 
 function getRandomColor() {
-  for (let i = 0; i < color.length; i++) {
-    color[i] = getRandomIntInclusive(0, 255)
+  for (let i = 0; i < color.length; i += 1) {
+    color[i] = getRandomIntInclusive(0, 255);
   }
+}
+
+function textMainColor() {
+  const text = document.getElementById('text');
+  text.className = 'text';
+  text.innerText = `R: ${color[0]} G: ${color[1]} B: ${color[2]}`;
 }
 
 function changeColor() {
   getRandomColor();
   textMainColor();
-  document.body.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
-}
-
-function textMainColor() {
-  let text = document.getElementById("text")
-  text.className = "text";
-  text.innerText = 'R: ' + color[0] + ' G: ' + color[1] + ' B: ' + color[2];
+  document.body.style.backgroundColor = `rgb(${color[0]},${color[1]},${color[2]})`;
 }
 
 document.body.onload = changeColor();
 document.body.onload = textMainColor();
 
-// Div creating
+const buttons = document.querySelectorAll('button');
+const div = document.createElement('div');
+const span = document.createElement('span');
 
-var div = document.createElement('div');
-var span = document.createElement('span');
-
-function createDiv() {
-  div.innerHTML = '';
-  getRandomColor();
-  div.id = "createArea";
-  div.className = "divClassName";
-  span.innerText = 'R: ' + color[0] + ' G: ' + color[1] + ' B: ' + color[2];
-  span.className = "text";
-  div.style.backgroundColor = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
-  document.body.appendChild(div);
-  div.appendChild(span);
-}
-
-function removeDiv() {
-  let div = document.getElementById("createArea");
-  div.remove();
-}
-
-function showDiv() {
-  let div = document.getElementById("createArea");
-  div.style.display = "block";
-}
-
-function hideDiv() {
-  let div = document.getElementById("createArea");
-  div.style.display = "none";
-}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const area = document.getElementById('createArea');
+    if (button.id === 'change') {
+      changeColor();
+    } else if (button.id === 'create') {
+      div.innerHTML = '';
+      getRandomColor();
+      div.id = 'createArea';
+      div.className = 'divClassName';
+      span.innerText = `R: ${color[0]} G: ${color[1]} B: ${color[2]}`;
+      span.className = 'text';
+      div.style.backgroundColor = `rgb(${color[0]},${color[1]},${color[2]})`;
+      document.body.appendChild(div);
+      div.appendChild(span);
+    } else if (button.id === 'hide') {
+      area.style.display = 'none';
+    } else if (button.id === 'show') {
+      area.style.display = 'block';
+    } else if (button.id === 'remove') {
+      area.remove();
+    }
+  });
+});
