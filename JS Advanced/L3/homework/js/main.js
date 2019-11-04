@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable max-len */
 /*
 
   Задание написать простой слайдер.
@@ -18,28 +20,36 @@
 
 */
 
-var images = ['images/cat1.jpg', 'images/cat2.jpg', 'images/cat3.jpg', 'images/cat4.jpg', 'images/cat5.jpg', 'images/cat6.jpg', 'images/cat7.jpg', 'images/cat8.jpg'];
-var num = 0;
-var prev = document.getElementById('PrevSilde');
-var next = document.getElementById('NextSilde');
-var slider = document.getElementById('slider');
-var element = document.querySelector('#slider');
+const images = ['images/cat1.jpg',
+  'images/cat2.jpg',
+  'images/cat3.jpg',
+  'images/cat4.jpg',
+  'images/cat5.jpg',
+  'images/cat6.jpg',
+  'images/cat7.jpg',
+  'images/cat8.jpg',
+];
+let num = 0;
+const prev = document.getElementById('PrevSilde');
+const next = document.getElementById('NextSilde');
+const slider = document.getElementById('slider');
+const element = document.querySelector('#slider');
 
 console.log(element);
 
-window.onload = function () {
-  element.classList.add('animated', 'fadeIn')
-  element.addEventListener('animationend', function() { 
+window.addEventListener('DOMContentLoaded', () => {
+  element.classList.add('animated', 'fadeIn');
+  element.addEventListener('animationend', () => {
     element.classList.remove('animated', 'fadeIn');
   });
-  var img = new Image();
+  const img = new Image();
   img.src = images[0];
   slider.appendChild(img);
-};
+});
 
 function image() {
   slider.innerHTML = '';
-  var img = new Image();
+  const img = new Image();
   if (num >= images.length) {
     num = 0;
   } else if (num < 0) {
@@ -47,25 +57,24 @@ function image() {
   }
   img.src = images[num];
   slider.appendChild(img);
+}
 
-};
-
-prev.addEventListener('click', function () {
-  element.classList.add('animated', 'fadeIn')
-  element.addEventListener('animationend', function() { 
+prev.addEventListener('click', () => {
+  element.classList.add('animated', 'fadeIn');
+  element.addEventListener('animationend', () => {
     element.classList.remove('animated', 'fadeIn');
   });
   console.log(element);
-  num--;
+  num -= 1;
   image();
 });
 
-next.addEventListener('click', function () {
-  element.classList.add('animated', 'fadeIn')
-  element.addEventListener('animationend', function() { 
+next.addEventListener('click', () => {
+  element.classList.add('animated', 'fadeIn');
+  element.addEventListener('animationend', () => {
     element.classList.remove('animated', 'fadeIn');
   });
   console.log(element);
-  num++;
+  num += 1;
   image();
 });
