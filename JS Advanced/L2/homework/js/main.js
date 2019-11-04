@@ -73,13 +73,13 @@
 
 // Второй вариант. Вполе себе ок, наверное.
 
-let btn = document.querySelector('.buttonsHeader');
-let tabs = document.querySelectorAll('.tab');
+const btn = document.querySelector('.buttonsHeader');
+const tabs = document.querySelectorAll('.tab');
 
 btn.onclick = function open(event) {
-  let button = event.target;
+  const button = event.target;
   if (button.className === 'showButton') {
-    tabs.forEach(tab => {
+    tabs.forEach((tab) => {
       if (tab.dataset.tab === button.dataset.tab) {
         tab.classList.toggle('active');
       } else {
@@ -87,4 +87,4 @@ btn.onclick = function open(event) {
       }
     });
   }
-}
+};
