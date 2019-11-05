@@ -7,17 +7,17 @@
         5. Выбрать все элементы по классу 'test'
     */
 
-// var getById = document.getElementById("test");
-// console.log(getById.closest(".list"));
+const getById = document.getElementById('test');
+console.log(getById.closest('.list'));
 
-// var getByCSS = document.querySelectorAll("button");
-// console.log(getById, getByCSS);
+const getByCSS = document.querySelectorAll('button');
+console.log(getById, getByCSS);
 
-// var getAllLi = document.getElementsByTagName("li")
-// console.log(getAllLi);
+const getAllLi = document.getElementsByTagName('li');
+console.log(getAllLi);
 
-// var getAllTest = document.getElementById("test");
-// console.log(getAllTest);
+const getAllTest = document.getElementById('test');
+console.log(getAllTest);
 
-var test = document.getElementById("createArea");
-console.log(test.closest(".wrap"));
+const test = document.getElementById('createArea');
+console.log(test.closest('.wrap'));

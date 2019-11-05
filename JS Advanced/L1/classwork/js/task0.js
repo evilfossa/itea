@@ -13,15 +13,15 @@
       */
 
 
-var Table = ['Hey!', 'this', 'is', 'js', 'advanced', 'course'];
+const Table = ['Hey!', 'this', 'is', 'js', 'advanced', 'course'];
 
-console.log("Combined log: ");
+console.log('Combined log: ');
 console.table([Table]);
-console.error("Oops! Something gonna wrong!");
+console.error('Oops! Something gonna wrong!');
 console.warn("Be careful in the dark! It's can be dangerous");
-console.log("%cCSS Console log!", "font-size:30px; color: green")
+console.log('%cCSS Console log!', 'font-size:30px; color: green');
 
-console.group("log1");
-console.log("Group");
-console.log("Log 2");
-console.groupEnd()
+console.group('log1');
+console.log('Group');
+console.log('Log 2');
+console.groupEnd();
