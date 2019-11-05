@@ -7,15 +7,15 @@
       6. Применить метод toggle на класс "Command"
     */
 
-var getById = document.getElementById("target")
+const getById = document.getElementById('target');
 
 function createDiv() {
-    let div = document.createElement('div');
-    div.className = "Ctrl Shift Delete";
-    div.classList.add("addClass");
-    div.classList.remove("Shift");
-    div.classList.toggle("Ctrl");
-    getById.appendChild(div);
+  const div = document.createElement('div');
+  div.className = 'Ctrl Shift Delete';
+  div.classList.add('addClass');
+  div.classList.remove('Shift');
+  div.classList.toggle('Ctrl');
+  getById.appendChild(div);
 }
 
 createDiv();
