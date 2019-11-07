@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /*
 
       Поработаем немного с ивентами:
@@ -22,7 +23,7 @@
 
         one > two > three ... > six
 
-      3. На кнопку клика (Light) повесить обработчик, который будет выводить в 
+      3. На кнопку клика (Light) повесить обработчик, который будет выводить в
       блок с результатом (lightResult) поочередно один из цветов светофора:
       Цикл: Off -> Red -> Yellow -> Green -> Off
 
@@ -39,51 +40,46 @@
         115 -> one one five
 
 
-
     */
 
-var mouseHover = document.getElementById('mouseHover');
-var mouseClick = document.getElementById('mouseClick');
-var mouseLight = document.getElementById('mouseLight');
-var keyboardButton = document.getElementById('keyboardButton');
+const mouseHover = document.getElementById('mouseHover');
+const mouseClick = document.getElementById('mouseClick');
+const mouseLight = document.getElementById('mouseLight');
+const keyboardButton = document.getElementById('keyboardButton');
 
 function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var color = ["red", "blue", "green", "orange", "purple"];
+const color = ['red', 'blue', 'green', 'orange', 'purple'];
 
 mouseHover.onmouseenter = function () {
-    let hover = document.getElementById("hoverResult");
-    let li = document.createElement('li');
-    li.className = color[getRandomIntInclusive(0, 4)];
-    li.innerText = "hovered!";
-    hover.appendChild(li);
-}
+  const hover = document.getElementById('hoverResult');
+  const li = document.createElement('li');
+  li.className = color[getRandomIntInclusive(0, 4)];
+  li.innerText = 'hovered!';
+  hover.appendChild(li);
+};
 
-var clickIndex = 0;
-var direction = true;
+const clickIndex = 0;
+const direction = true;
 
-var sec = ["one", "two", "three", "four", "five", "six"]
+const sec = ['one', 'two', 'three', 'four', 'five', 'six'];
 mouseClick.onclick = function () {
-    console.dir('click');
-    let div = document.getElementById("clickResult");
-    for (let i = 0; i < sec.length; i++) {
-        div.classList.remove(sec[i]);
-    }
-
-
-
-
-}
+  console.dir('click');
+  const div = document.getElementById('clickResult');
+  for (let i = 0; i < sec.length; i += 1) {
+    div.classList.remove(sec[i]);
+  }
+};
 
 mouseLight.onclick = function () {
-    console.log('light');
-}
+  console.log('light');
+};
 
-var counter = 0;
+const counter = 0;
 keyboardButton.onkeydown = function () {
-    console.log('keydown');
-}
+  console.log('keydown');
+};
