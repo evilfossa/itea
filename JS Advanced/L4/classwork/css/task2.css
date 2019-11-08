@@ -1,0 +1,31 @@
+#colors {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.result {
+    width: 50px;
+    background: gray;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#MyValidateForm {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+#MyValidateForm input {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border-radius: 50%;
+}
