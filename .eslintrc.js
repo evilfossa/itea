@@ -16,6 +16,10 @@ module.exports = {
   },
   rules: {
     "no-param-reassign": 0,
-    "prefer-destructuring": ["error", {"object": true, "array": false}]
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "no-multiple-empty-lines": 0,
+    "no-trailing-spaces": 0,
+    "no-console": 0,
+    "no-alert": 0
   },
 };
