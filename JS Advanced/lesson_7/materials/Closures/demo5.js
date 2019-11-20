@@ -10,7 +10,7 @@ const Demo = () => {
 
     var version = '1.0.1';
     function jsIsEasyToLearn(){
-      console.log('Yeap, closures is the easiest part', version);
+      console.log(`Yeap, closures is the easiest part, ${version}`);
     }
 
     ITEA.jsIsEasyToLearn = jsIsEasyToLearn;
